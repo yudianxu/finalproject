@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image of the day</title>
+</head>
+<body>
+<h2>Astronomy Picture of the Day:</h2>
+{% if invalid %}
+	<p>The date you entered is either in the future or too early :(</p>
+	<p>	Please select a date after 1995/06/16 and before today :)</p>
+{% elif dict %}
+	<h4>{{dict['date']}}</h4>
+	<img src="{{dict['hdurl']}}" alt="dict['explanation']" height="800px">
+	<p><b>Explanation:</b>{{dict['explanation']}}</p>
+{% endif %}
+<a href="/">Search again?</a >
+</body>
+</html>

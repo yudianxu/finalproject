@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image of the day</title>
+</head>
+<body>
+<h2>Astronomy Picture of A Random Day:</h2>
+{% if dict %}
+	<h4>{{dict['date']}}</h4>
+	<img src="{{dict['hdurl']}}" alt="dict['explanation']" height="800px">
+	<p><b>Explanation:</b>{{dict['explanation']}}</p>
+{% endif %}
+<a href="/">Search again?</a >
+</body>
+</html>

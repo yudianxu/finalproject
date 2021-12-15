@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{date}}</title>
+</head>
+<body>
+<h1>Astronomy Picture of the Day Archive</h1>
+<img src="https://images-na.ssl-images-amazon.com/images/I/6111kA98OPL.png" class="rounded mx-auto d-block" alt="background">
+<form action="/dateresponse" method="get">
+    <label for="date">Please enter a date:</label>
+    <input type="date" id="date" name="date" date_input="date" placeholder="YYYY-MM-DD" /><br />
+<!--    <input type="checkbox" date_input="date_type" value="hello" id="hello"/>-->
+<!--	 <label for="hello">Astronomy Picture of the Day</label><br />-->
+<!--    <input type="checkbox" name="greet_type" value="birthday" id="birthday">-->
+<!--	 <label for="birthday">Birthday greeting</label>-->
+    <input type="submit" value="Go" name="gobtn"/> </form>
+
+
+<form action="/randomresponse" method="get">
+    <input type="submit" value="Random" name="gorandom"/> </form>
+
+{% if prompt %}
+<div class= 'formtitle'>{{prompt}}</div>
+{% endif %}
+</body>
+</html>
